@@ -12,7 +12,11 @@
   "content_scripts": [
     {
       "js":["node_modules/jquery/dist/jquery.min.js","main.js"],
-      "matches":["http://www.panda.tv/*"]
+      "matches":[
+        "http://www.panda.tv/*",
+        "http://www.quanmin.tv/*",
+        "https://www.douyu.com/*"
+      ]
     }
   ]
 }
