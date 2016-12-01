@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "自动弹幕机",
+  "description": "This extension demonstrates a browser action with kittens.",
+  "version": "1.0",
+
+  "permissions": [],
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "js":["node_modules/jquery/dist/jquery.min.js","main.js"],
+      "matches":["http://www.panda.tv/*"]
+    }
+  ]
+}
