@@ -24,5 +24,5 @@ function sendBarrage(textareaSelector, sendBtnSelector, beforeFn) {
         i++;
         $(textareaSelector).val(msg + i);
         $(sendBtnSelector).click();
-    }, 10000);
+    }, 20000);
 }
