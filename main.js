@@ -5,7 +5,7 @@ var i = 0,
 
 
 if (href.indexOf('quanmin') > 0) {
-    sendBarrage('.w-sender_textarea', '.w-sender_submit-btn');
+    sendBarrage('asd', 'asd', quanmin())
 } else if (href.indexOf('panda') > 0) {
     sendBarrage('.room-chat-texta', '.room-chat-send');
 } else if (href.indexOf('douyu') > 0) {
@@ -25,4 +25,12 @@ function sendBarrage(textareaSelector, sendBtnSelector, beforeFn) {
         $(textareaSelector).val(msg + i);
         $(sendBtnSelector).click();
     }, 20000);
+}
+
+function quanmin(i) {
+    $.ajax({
+        type: 'POST',
+        url: 'http://www.quanmin.tv/barrage/sendBarrage?p=5&rid=15&rcat=1&uid=10205139&net=0&screen=3&device=rwduvf64prarqwhnzjtjj1s1cl80lcajhvuung25&refer=room%2F15&sw=1280&sh=800',
+        data: {"p":{"type":0,"room":i,"text":"gaylun tv 直播整合"}},
+    });
 }
