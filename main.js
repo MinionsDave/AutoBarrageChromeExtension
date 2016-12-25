@@ -14,6 +14,8 @@ if (href.indexOf('quanmin') > 0) {
     sendBarrage('#pub_msg_input', '#msg_send_bt', function () {
         $('#msg_send_bt').addClass('enable');
     });
+} else if (href.indexOf('zhanqi') > 0) {
+    zhanqi('.js-chat-msg-input', '.send-btn');
 }
 
 function sendBarrage(textareaSelector, sendBtnSelector, beforeFn) {
@@ -24,6 +26,14 @@ function sendBarrage(textareaSelector, sendBtnSelector, beforeFn) {
         i++;
         $(textareaSelector).val(msg + i);
         $(sendBtnSelector).click();
+    }, 10000);
+}
+
+function zhanqi(textareaSelector, sendBtnSelector) {
+    setInterval(function () {
+        i++;
+        $(textareaSelector).val(msg + i);
+        $(sendBtnSelector).get(0).click();
     }, 20000);
 }
 
